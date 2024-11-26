@@ -1,0 +1,28 @@
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%; /* Two equal-width columns */
+    gap: 10px;
+}
+
+.container-w {
+    display: grid;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Stack the divs vertically */
+        height: auto; /* Allow height to adjust to content */
+    }
+
+    .box {
+        height: 50vh; /* Optional: Each box is half the viewport height */
+    }
+}

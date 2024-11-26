@@ -1,0 +1,48 @@
+{
+    "requests": {
+        "request1": {
+            "avatar": "./assets/img/persona-1.png",
+            "name": "Mark Jacobs",
+            "period": {
+                "start": "2023-03-31T09:00:00",
+                "end": "2023-03-31T18:00:00"
+            },
+            "days": "1.0",
+            "leave_type": "Annual Leave",
+            "actions": "<button class='reject-btn'>Reject</button> <button class='approve-btn'>Approve</button><span><img src='./assets/img/right-arrow.svg'></span>"
+        },
+        "request2": {
+            "avatar": "./assets/img/persona-2.png",
+            "name": "Charlie Kristen",
+            "period": {
+                "start": "2023-04-10T09:00:00",
+                "end": "2023-04-11T18:00:00"
+            },
+            "days": "2.0",
+            "leave_type": "Annual Leave",
+            "actions": "<button class='reject-btn'>Reject</button> <button class='approve-btn'>Approve</button><span><img src='./assets/img/right-arrow.svg'></span>"
+        },
+        "request3": {
+            "avatar": "./assets/img/persona-3.png",
+            "name": "Nur Fariha binti Maslan",
+            "period": {
+                "start": "2023-04-21T09:00:00",
+                "end": "2023-04-24T18:00:00"
+            },
+            "days": "2.0",
+            "leave_type": "Hospital Leave",
+            "actions": "<button class='reject-btn'>Reject</button> <button class='approve-btn'>Approve</button><span><img src='./assets/img/right-arrow.svg'></span>"
+        },
+        "request4": {
+            "avatar": "./assets/img/persona-4.png",
+            "name": "Nishant Talwar",
+            "period": {
+                "start": "2023-02-27T09:00:00",
+                "end": "2023-02-28T18:00:00"
+            },
+            "days": "1.5",
+            "leave_type": "Sick Leave",
+            "actions": "<button class='reject-btn'>Reject</button> <button class='approve-btn'>Approve</button><span><img src='./assets/img/right-arrow.svg'></span>"
+        }
+    }
+}

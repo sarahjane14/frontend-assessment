@@ -1,0 +1,38 @@
+.chart {
+    position: relative;
+    display: inline-block;
+    width: var(--svgSize);
+    height: var(--svgSize);
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--foregroundColor) calc(var(--percentage) * 1%),
+        var(--backgroundColor) 0
+    );
+    animation: grow var(--duration) ease-in-out var(--animationDelay);
+}
+
+.chart:before {
+    content: attr(data-label);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--labelFontSize);
+    color: var(--labelColor);
+}
+
+@keyframes grow {
+    from {
+        background: conic-gradient(
+            var(--foregroundColor) 0%,
+            var(--backgroundColor) 0
+        );
+    }
+    to {
+        background: conic-gradient(
+            var(--foregroundColor) calc(var(--percentage) * 1%),
+            var(--backgroundColor) 0
+        );
+    }
+}

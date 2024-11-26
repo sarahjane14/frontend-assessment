@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Front-end Assessment</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <!-- Flatpickr CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+        <!-- DataTables CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+
+        <!-- Select2 CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <div class="header-left">
+                <!-- <div class="header-left-logo">
+                    <a class="logo" href="Index.html">
+                        <img src="assets/img/logo.png" alt="logo" />
+                    </a>
+                    <a class="expand" href="#">
+                        <img src="assets/img/navigate-icon.svg" alt="expand" />
+                    </a>
+                </div> -->
+            </div>
+            <div class="header-center">
+                <div class="header-center-logo">
+                    <img src="./assets/img/union.svg" alt="union" />
+                    <h1>Menumiz HR</h1>
+                </div>
+                <div class="header-center-right">
+                    <div class="header-searchbar">
+                        <input
+                            type="text"
+                            class="searchbar"
+                            placeholder="Enter any keyword..." />
+                        <button>
+                            <img
+                                src="./assets/img/search-icon.png"
+                                alt="search" />
+                        </button>
+                    </div>
+                    <div class="header-filter">
+                        <img src="./assets/img/filter-icon.png" alt="filter" />
+                    </div>
+                    <div class="header-notif">
+                        <a href="#">
+                            <img
+                                src="./assets/img/notification-icon.png"
+                                alt="notification" />
+                        </a>
+                    </div>
+                    <div class="header-persona">
+                        <img src="./assets/img/persona.png" alt="persona" />
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-section-wrapper">
+            <!--Start of Sidebar Menu-->
+            <div class="sidebar-wrapper sidebar" id="mySidebar">
+                <div class="sidebar-container">
+                    <div class="sidebar-header">
+                        <div class="header-left-logo">
+                            <a class="logo" href="Index.html">
+                                <img src="assets/img/logo.png" alt="logo" />
+                            </a>
+                        </div>
+                        <button class="toggle-btn">
+                            <a class="expand" href="#">
+                                <img
+                                    src="assets/img/navigate-icon.svg"
+                                    alt="expand" />
+                            </a>
+                        </button>
+                    </div>
+                    <div class="sidebar-menu-wrapper">
+                        <div class="sidebar-menu">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22 8.52V3.98C22 2.57 21.36 2 19.77 2L15.73 2C14.14 2 13.5 2.57 13.5 3.98V8.51C13.5 9.93 14.14 10.49 15.73 10.49H19.77C21.36 10.5 22 9.93 22 8.52Z"
+                                    fill="#898989"></path>
+                                <path
+                                    d="M22 19.77V15.73C22 14.14 21.36 13.5 19.77 13.5H15.73C14.14 13.5 13.5 14.14 13.5 15.73V19.77C13.5 21.36 14.14 22 15.73 22H19.77C21.36 22 22 21.36 22 19.77Z"
+                                    fill="#898989"></path>
+                                <path
+                                    d="M10.5 8.52V3.98C10.5 2.57 9.86 2 8.27 2L4.23 2C2.64 2 2 2.57 2 3.98L2 8.51C2 9.93 2.64 10.49 4.23 10.49H8.27C9.86 10.5 10.5 9.93 10.5 8.52Z"
+                                    fill="#898989"></path>
+                                <path
+                                    d="M10.5 19.77V15.73C10.5 14.14 9.86 13.5 8.27 13.5H4.23C2.64 13.5 2 14.14 2 15.73L2 19.77C2 21.36 2.64 22 4.23 22H8.27C9.86 22 10.5 21.36 10.5 19.77Z"
+                                    fill="#898989"></path>
+                            </svg>
+                            <h1>Dashboard</h1>
+                        </div>
+                        <div class="sidebar-menu">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.75 3.56V2C16.75 1.59 16.41 1.25 16 1.25C15.59 1.25 15.25 1.59 15.25 2V3.5H8.74999V2C8.74999 1.59 8.40999 1.25 7.99999 1.25C7.58999 1.25 7.24999 1.59 7.24999 2V3.56C4.54999 3.81 3.23999 5.42 3.03999 7.81C3.01999 8.1 3.25999 8.34 3.53999 8.34H20.46C20.75 8.34 20.99 8.09 20.96 7.81C20.76 5.42 19.45 3.81 16.75 3.56Z"
+                                    fill="#898989"></path>
+                                <path
+                                    d="M20 9.84003H4C3.45 9.84003 3 10.29 3 10.84L3 17C3 20 4.5 22 8 22H16C19.5 22 21 20 21 17V10.84C21 10.29 20.55 9.84003 20 9.84003ZM9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21ZM9.21 14.71C9.02 14.89 8.76 15 8.5 15C8.24 15 7.98 14.89 7.79 14.71C7.61 14.52 7.5 14.26 7.5 14C7.5 13.74 7.61 13.48 7.79 13.29C8.07 13.01 8.51 12.92 8.88 13.08C9.01 13.13 9.12 13.2 9.21 13.29C9.39 13.48 9.5 13.74 9.5 14C9.5 14.26 9.39 14.52 9.21 14.71ZM12.71 18.21C12.52 18.39 12.26 18.5 12 18.5C11.74 18.5 11.48 18.39 11.29 18.21C11.11 18.02 11 17.76 11 17.5C11 17.24 11.11 16.98 11.29 16.79C11.66 16.42 12.34 16.42 12.71 16.79C12.89 16.98 13 17.24 13 17.5C13 17.76 12.89 18.02 12.71 18.21ZM12.71 14.71C12.66 14.75 12.61 14.79 12.56 14.83C12.5 14.87 12.44 14.9 12.38 14.92C12.32 14.95 12.26 14.97 12.2 14.98C12.13 14.99 12.07 15 12 15C11.74 15 11.48 14.89 11.29 14.71C11.11 14.52 11 14.26 11 14C11 13.74 11.11 13.48 11.29 13.29C11.38 13.2 11.49 13.13 11.62 13.08C11.99 12.92 12.43 13.01 12.71 13.29C12.89 13.48 13 13.74 13 14C13 14.26 12.89 14.52 12.71 14.71ZM16.21 18.21C16.02 18.39 15.76 18.5 15.5 18.5C15.24 18.5 14.98 18.39 14.79 18.21C14.61 18.02 14.5 17.76 14.5 17.5C14.5 17.24 14.61 16.98 14.79 16.79C15.16 16.42 15.84 16.42 16.21 16.79C16.39 16.98 16.5 17.24 16.5 17.5C16.5 17.76 16.39 18.02 16.21 18.21ZM16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71Z"
+                                    fill="#898989"></path>
+                            </svg>
+                            <h1>Calendar</h1>
+                        </div>
+                        <div class="sidebar-menu">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9 2C6.38 2 4.25 4.13 4.25 6.75C4.25 9.32 6.26 11.4 8.88 11.49C8.96 11.48 9.04 11.48 9.1 11.49C9.12 11.49 9.13 11.49 9.15 11.49C9.16 11.49 9.16 11.49 9.17 11.49C11.73 11.4 13.74 9.32 13.75 6.75C13.75 4.13 11.62 2 9 2Z"
+                                    fill="#898989"></path>
+                                <path
+                                    d="M14.08 14.15C11.29 12.29 6.73996 12.29 3.92996 14.15C2.65996 15 1.95996 16.15 1.95996 17.38C1.95996 18.61 2.65996 19.75 3.91996 20.59C5.31996 21.53 7.15996 22 8.99996 22C10.84 22 12.68 21.53 14.08 20.59C15.34 19.74 16.04 18.6 16.04 17.36C16.03 16.13 15.34 14.99 14.08 14.15Z"
+                                    fill="#898989"></path>
+                                <path
+                                    d="M19.99 7.33998C20.15 9.27998 18.77 10.98 16.86 11.21C16.85 11.21 16.85 11.21 16.84 11.21H16.81C16.75 11.21 16.69 11.21 16.64 11.23C15.67 11.28 14.78 10.97 14.11 10.4C15.14 9.47998 15.73 8.09998 15.61 6.59998C15.54 5.78998 15.26 5.04998 14.84 4.41998C15.22 4.22998 15.66 4.10998 16.11 4.06998C18.07 3.89998 19.82 5.35998 19.99 7.33998Z"
+                                    fill="#898989"></path>
+                                <path
+                                    d="M21.99 16.59C21.91 17.56 21.29 18.4 20.25 18.97C19.25 19.52 17.99 19.78 16.74 19.75C17.46 19.1 17.88 18.29 17.96 17.43C18.06 16.19 17.47 15 16.29 14.05C15.62 13.52 14.84 13.1 13.99 12.79C16.2 12.15 18.98 12.58 20.69 13.96C21.61 14.7 22.08 15.63 21.99 16.59Z"
+                                    fill="#898989"></path>
+                            </svg>
+                            <h1>Recruitment</h1>
+                            <div class="badge">10</div>
+                        </div>
+                        <div class="sidebar-menu">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#898989"></path>
+                                <path
+                                    d="M17.08 14.15C14.29 12.29 9.73996 12.29 6.92996 14.15C5.65996 15 4.95996 16.15 4.95996 17.38C4.95996 18.61 5.65996 19.75 6.91996 20.59C8.31996 21.53 10.16 22 12 22C13.84 22 15.68 21.53 17.08 20.59C18.34 19.74 19.04 18.6 19.04 17.36C19.03 16.13 18.34 14.99 17.08 14.15Z"
+                                    fill="#898989"></path>
+                            </svg>
+                            <h1>Employees</h1>
+                        </div>
+                        <div class="sidebar-menu active">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75ZM12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75Z"
+                                    fill="white"></path>
+                                <path
+                                    d="M15.71 15.93C15.58 15.93 15.45 15.9 15.33 15.82L12.23 13.97C11.46 13.51 10.89 12.5 10.89 11.61V7.51001C10.89 7.10001 11.23 6.76001 11.64 6.76001C12.05 6.76001 12.39 7.10001 12.39 7.51001V11.61C12.39 11.97 12.69 12.5 13 12.68L16.1 14.53C16.46 14.74 16.57 15.2 16.36 15.56C16.21 15.8 15.96 15.93 15.71 15.93Z"
+                                    fill="white"></path>
+                            </svg>
+                            <h1>Leave</h1>
+                        </div>
+                        <div class="sidebar-menu">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M20 6.25C21.2426 6.25 22.25 5.24264 22.25 4C22.25 2.75736 21.2426 1.75 20 1.75C19.0203 1.75 18.1869 2.37611 17.878 3.25L14 3.25C11.58 3.25 10.25 4.58 10.25 7V11.25H6.12197C5.81309 10.3761 4.97966 9.75 4 9.75C2.75736 9.75 1.75 10.7574 1.75 12C1.75 13.2426 2.75736 14.25 4 14.25C4.97966 14.25 5.81309 13.6239 6.12197 12.75H10.25V17C10.25 19.42 11.58 20.75 14 20.75H17.878C18.1869 21.6239 19.0203 22.25 20 22.25C21.2426 22.25 22.25 21.2426 22.25 20C22.25 18.7574 21.2426 17.75 20 17.75C19.0203 17.75 18.1869 18.3761 17.878 19.25H14C12.42 19.25 11.75 18.58 11.75 17V12.75H17.878C18.1869 13.6239 19.0203 14.25 20 14.25C21.2426 14.25 22.25 13.2426 22.25 12C22.25 10.7574 21.2426 9.75 20 9.75C19.0203 9.75 18.1869 10.3761 17.878 11.25H11.75V7C11.75 5.42 12.42 4.75 14 4.75H17.878C18.1869 5.62389 19.0203 6.25 20 6.25Z"
+                                    fill="#898989"></path>
+                            </svg>
+                            <h1>Organisation</h1>
+                        </div>
+                        <div class="sidebar-menu">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.75 15.9199H13.4C14.05 15.9199 14.59 15.3399 14.59 14.6399C14.59 13.7699 14.28 13.5999 13.77 13.4199L12.76 13.0699V15.9199H12.75Z"
+                                    fill="#898989"></path>
+                                <path
+                                    d="M11.9699 1.90004C6.44994 1.92004 1.97994 6.41004 1.99994 11.93C2.01994 17.45 6.50994 21.92 12.0299 21.9C17.5499 21.88 22.0199 17.39 21.9999 11.87C21.9799 6.35004 17.4899 1.89004 11.9699 1.90004ZM14.2599 12C15.0399 12.27 16.0899 12.85 16.0899 14.64C16.0899 16.18 14.8799 17.42 13.3999 17.42H12.7499V18C12.7499 18.41 12.4099 18.75 11.9999 18.75C11.5899 18.75 11.2499 18.41 11.2499 18V17.42H10.8899C9.24995 17.42 7.91994 16.04 7.91994 14.34C7.91994 13.93 8.25994 13.59 8.66994 13.59C9.07994 13.59 9.41994 13.93 9.41994 14.34C9.41994 15.21 10.0799 15.92 10.8899 15.92H11.2499V12.54L9.73994 12C8.95994 11.73 7.90994 11.15 7.90994 9.36004C7.90994 7.82004 9.11995 6.58004 10.5999 6.58004H11.2499V6.00004C11.2499 5.59004 11.5899 5.25004 11.9999 5.25004C12.4099 5.25004 12.7499 5.59004 12.7499 6.00004V6.58004L13.1099 6.58004C14.7499 6.58004 16.0799 7.96004 16.0799 9.66004C16.0799 10.07 15.7399 10.41 15.3299 10.41C14.9199 10.41 14.5799 10.07 14.5799 9.66004C14.5799 8.79004 13.9199 8.08004 13.1099 8.08004H12.7499V11.46L14.2599 12Z"
+                                    fill="#898989"></path>
+                                <path
+                                    d="M9.42004 9.36996C9.42004 10.24 9.73004 10.41 10.24 10.59L11.25 10.94V8.07996H10.6C9.95004 8.07996 9.42004 8.65996 9.42004 9.36996Z"
+                                    fill="#898989"></path>
+                            </svg>
+                            <h1>Billings</h1>
+                        </div>
+                        <div class="sidebar-menu">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17 2.43005L7 2.43005C4 2.43005 2 4.43005 2 7.43005L2 13.4301C2 16.4301 4 18.4301 7 18.4301V20.5601C7 21.3601 7.89 21.8401 8.55 21.3901L13 18.4301H17C20 18.4301 22 16.4301 22 13.4301V7.43005C22 4.43005 20 2.43005 17 2.43005ZM12 14.6001C11.58 14.6001 11.25 14.2601 11.25 13.8501C11.25 13.4401 11.58 13.1001 12 13.1001C12.42 13.1001 12.75 13.4401 12.75 13.8501C12.75 14.2601 12.42 14.6001 12 14.6001ZM13.26 10.4501C12.87 10.7101 12.75 10.8801 12.75 11.1601V11.3701C12.75 11.7801 12.41 12.1201 12 12.1201C11.59 12.1201 11.25 11.7801 11.25 11.3701V11.1601C11.25 10.0001 12.1 9.43005 12.42 9.21005C12.79 8.96005 12.91 8.79005 12.91 8.53005C12.91 8.03005 12.5 7.62005 12 7.62005C11.5 7.62005 11.09 8.03005 11.09 8.53005C11.09 8.94005 10.75 9.28005 10.34 9.28005C9.93 9.28005 9.59 8.94005 9.59 8.53005C9.59 7.20005 10.67 6.12005 12 6.12005C13.33 6.12005 14.41 7.20005 14.41 8.53005C14.41 9.67005 13.57 10.2401 13.26 10.4501Z"
+                                    fill="#898989"></path>
+                            </svg>
+                            <h1>Engagement</h1>
+                        </div>
+                        <div class="sidebar-menu">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.56 2L6.41 2C3.98 2 2 3.98 2 6.41L2 12.91V13.11C2 15.55 3.98 17.52 6.41 17.52H10.25C10.8 17.52 11.25 17.97 11.25 18.52V19.49C11.25 20.04 10.8 20.49 10.25 20.49H7.83C7.42 20.49 7.08 20.83 7.08 21.24C7.08 21.65 7.41 22 7.83 22H16.18C16.59 22 16.93 21.66 16.93 21.25C16.93 20.84 16.59 20.5 16.18 20.5H13.76C13.21 20.5 12.76 20.05 12.76 19.5V18.53C12.76 17.98 13.21 17.53 13.76 17.53H17.57C20.01 17.53 21.98 15.55 21.98 13.12V12.92V6.42C21.97 3.98 19.99 2 17.56 2Z"
+                                    fill="#898989"></path>
+                            </svg>
+                            <h1>Development</h1>
+                        </div>
+                        <div class="sidebar-menu">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M5 9C5 5.13 8.13 2 12 2C15.87 2 19 5.13 19 9C19 10.45 18.57 11.78 17.83 12.89C16.75 14.49 15.04 15.62 13.05 15.91C12.71 15.97 12.36 16 12 16C11.64 16 11.29 15.97 10.95 15.91C8.96 15.62 7.25 14.49 6.17 12.89C5.43 11.78 5 10.45 5 9ZM14.23 9.61L15.06 8.78C15.55 8.29 15.39 7.8 14.72 7.69L13.65 7.51C13.46 7.48 13.25 7.32 13.17 7.16L12.58 5.98C12.26 5.34 11.74 5.34 11.42 5.98L10.83 7.16C10.75 7.32 10.54 7.48 10.36 7.51L9.29 7.69C8.61 7.8 8.45 8.29 8.94 8.78L9.79 9.61C9.93 9.75 10 10.03 9.96 10.22L9.72 11.25C9.53 12.06 9.96 12.37 10.68 11.95L11.68 11.36C11.86 11.25 12.16 11.25 12.34 11.36L13.34 11.95C14.06 12.38 14.49 12.06 14.3 11.25L14.06 10.22C14.01 10.02 14.09 9.75 14.23 9.61ZM2.69992 18.4701L4.34992 18.8601C4.71992 18.9501 5.00992 19.2301 5.08992 19.6001L5.43992 21.0701C5.62992 21.8701 6.64992 22.1201 7.17992 21.4901L10.1699 18.0501C10.4099 17.7701 10.2799 17.3301 9.91992 17.2401C8.14992 16.8101 6.55992 15.8201 5.38992 14.4101C5.19992 14.1801 4.85992 14.1501 4.64992 14.3601L2.42992 16.5801C1.66992 17.3401 1.93992 18.2901 2.69992 18.4701ZM21.25 18.4701L19.6 18.8601C19.23 18.9501 18.94 19.2301 18.86 19.6001L18.51 21.0701C18.32 21.8701 17.3 22.1201 16.77 21.4901L13.78 18.0501C13.54 17.7701 13.67 17.3301 14.03 17.2401C15.8 16.8101 17.39 15.8201 18.56 14.4101C18.75 14.1801 19.09 14.1501 19.3 14.3601L21.52 16.5801C22.28 17.3401 22.01 18.2901 21.25 18.4701Z"
+                                    fill="#898989"></path>
+                            </svg>
+                            <h1>Performance</h1>
+                        </div>
+                        <div class="sidebar-menu">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81L2 16.19C2 19.83 4.17 22 7.81 22H16.19C19.83 22 22 19.83 22 16.19V7.81C22 4.17 19.83 2 16.19 2ZM7.75 13.6C7.75 14.01 7.41 14.35 7 14.35C6.59 14.35 6.25 14.01 6.25 13.6L6.25 10.4C6.25 9.99 6.59 9.65 7 9.65C7.41 9.65 7.75 9.99 7.75 10.4L7.75 13.6ZM12.75 15.34C12.75 15.75 12.41 16.09 12 16.09C11.59 16.09 11.25 15.75 11.25 15.34V8.66C11.25 8.25 11.59 7.91 12 7.91C12.41 7.91 12.75 8.25 12.75 8.66V15.34ZM17.75 13.6C17.75 14.01 17.41 14.35 17 14.35C16.59 14.35 16.25 14.01 16.25 13.6V10.4C16.25 9.99 16.59 9.65 17 9.65C17.41 9.65 17.75 9.99 17.75 10.4V13.6Z"
+                                    fill="#898989"></path>
+                            </svg>
+                            <h1>Reports</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of Sidebar Menu-->
+
+            <div id="main" class="main-section-body">
+                <div class="section-tabs">
+                    <ul class="tabs">
+                        <li>
+                            <input
+                                type="radio"
+                                checked
+                                name="tabs"
+                                id="leaveTab1" />
+                            <label for="leaveTab1">Leave Management</label>
+                            <div
+                                id="tab-content1"
+                                class="tab-content animated fadeIn">
+                                <!-- Dashboard Section Start -->
+                                <div class="section-dashboard">
+                                    <h1>Dashboard</h1>
+                                    <div class="container">
+                                        <div class="box">
+                                            <div class="box-container">
+                                                <div class="box-head">
+                                                    <h1>heatmap</h1>
+                                                    <div class="box-head-right">
+                                                        <select
+                                                            id="leaveType"
+                                                            class="leave-type">
+                                                            <option>
+                                                                Sickday
+                                                            </option>
+                                                            <option>
+                                                                Leave day
+                                                            </option>
+                                                        </select>
+                                                        <div
+                                                            class="date-time-picker">
+                                                            <input
+                                                                type="text"
+                                                                id="monthYearPicker"
+                                                                placeholder="Select Date" />
+                                                            <span
+                                                                class="dropdown-arrow"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="box-body">
+                                                    <div class="tab-days">
+                                                        <button
+                                                            data-day="mon"
+                                                            class="tabdays"
+                                                            onclick="openDay(event, 'mon')">
+                                                            Mon
+                                                        </button>
+                                                        <button
+                                                            data-day="tue"
+                                                            class="tabdays"
+                                                            onclick="openDay(event, 'tue')">
+                                                            Tue
+                                                        </button>
+                                                        <button
+                                                            data-day="wed"
+                                                            class="tabdays"
+                                                            onclick="openDay(event, 'wed')">
+                                                            Wed
+                                                        </button>
+                                                        <button
+                                                            data-day="thu"
+                                                            class="tabdays"
+                                                            onclick="openDay(event, 'thu')">
+                                                            Thu
+                                                        </button>
+                                                        <button
+                                                            data-day="fri"
+                                                            class="tabdays"
+                                                            onclick="openDay(event, 'fri')">
+                                                            Fri
+                                                        </button>
+                                                        <button
+                                                            data-day="sat"
+                                                            class="tabdays"
+                                                            onclick="openDay(event, 'sat')">
+                                                            Sat
+                                                        </button>
+                                                        <button
+                                                            data-day="sun"
+                                                            class="tabdays"
+                                                            onclick="openDay(event, 'sun')">
+                                                            Sun
+                                                        </button>
+                                                    </div>
+
+                                                    <!-- Tab Day content -->
+                                                    <div
+                                                        id="mon"
+                                                        class="tabcontent">
+                                                        <h3>
+                                                            Please click Friday
+                                                        </h3>
+                                                    </div>
+                                                    <div
+                                                        id="tue"
+                                                        class="tabcontent">
+                                                        <h3>
+                                                            Please click Friday
+                                                        </h3>
+                                                    </div>
+                                                    <div
+                                                        id="wed"
+                                                        class="tabcontent">
+                                                        <h3>
+                                                            Please click Friday
+                                                        </h3>
+                                                    </div>
+                                                    <div
+                                                        id="thu"
+                                                        class="tabcontent">
+                                                        <h3>
+                                                            Please click Friday
+                                                        </h3>
+                                                    </div>
+                                                    <div
+                                                        id="fri"
+                                                        class="tabcontent">
+                                                        <div
+                                                            class="leave-percentage-con">
+                                                            <div
+                                                                class="leave-percentage">
+                                                                <p>
+                                                                    Sick Leave
+                                                                </p>
+                                                                <div
+                                                                    class="box-circle">
+                                                                    <div
+                                                                        class="circle-border"
+                                                                        data-color1="#272727"
+                                                                        data-color2="#6e56e0">
+                                                                        <div
+                                                                            class="circle-percentage">
+                                                                            <span
+                                                                                class="percentage"
+                                                                                data-percentage="50"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="leave-percentage">
+                                                                <p>
+                                                                    Annual Leave
+                                                                </p>
+                                                                <div
+                                                                    class="box-circle">
+                                                                    <div
+                                                                        class="circle-border"
+                                                                        data-color1="#272727"
+                                                                        data-color2="#6e56e0">
+                                                                        <div
+                                                                            class="circle-percentage">
+                                                                            <span
+                                                                                class="percentage"
+                                                                                data-percentage="30"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="leave-percentage">
+                                                                <p>
+                                                                    Emergency
+                                                                    Leave
+                                                                </p>
+                                                                <div
+                                                                    class="box-circle">
+                                                                    <div
+                                                                        class="circle-border"
+                                                                        data-color1="#272727"
+                                                                        data-color2="#6e56e0">
+                                                                        <div
+                                                                            class="circle-percentage">
+                                                                            <span
+                                                                                class="percentage"
+                                                                                data-percentage="20"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        id="sat"
+                                                        class="tabcontent">
+                                                        <h3>Saturday</h3>
+                                                    </div>
+                                                    <div
+                                                        id="sun"
+                                                        class="tabcontent">
+                                                        <h3>Sunday</h3>
+                                                    </div>
+                                                </div>
+
+                                                <div class="box-footer">
+                                                    <p>
+                                                        Most popular day: Friday
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box">
+                                            <div class="box-container">
+                                                <div class="box-head">
+                                                    <h1>Most Days Away</h1>
+                                                    <div class="box-head-right">
+                                                        <div
+                                                            class="date-time-picker">
+                                                            <input
+                                                                type="text"
+                                                                id="monthYearPicker"
+                                                                placeholder="Select Date" />
+                                                            <span
+                                                                class="dropdown-arrow"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="box-body">
+                                                    <div class="days-away">
+                                                        <table
+                                                            id="daysAway"
+                                                            class="display">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img
+                                                                            src="./assets/img/persona-1.png" />
+                                                                    </td>
+                                                                    <td>
+                                                                        Mark
+                                                                        Jacobs
+                                                                    </td>
+                                                                    <td>
+                                                                        5.0
+                                                                        day(s)
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img
+                                                                            src="./assets/img/persona-2.png" />
+                                                                    </td>
+                                                                    <td>
+                                                                        Charlie
+                                                                        Kristen
+                                                                    </td>
+                                                                    <td>
+                                                                        3.5
+                                                                        day(s)
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img
+                                                                            src="./assets/img/persona-3.png" />
+                                                                    </td>
+                                                                    <td>
+                                                                        Nur
+                                                                        Fariha
+                                                                        binti
+                                                                        Maslan
+                                                                    </td>
+                                                                    <td>
+                                                                        1.0
+                                                                        day(s)
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img
+                                                                            src="./assets/img/persona-4.png" />
+                                                                    </td>
+                                                                    <td>
+                                                                        Nishant
+                                                                        Talwar
+                                                                    </td>
+                                                                    <td>
+                                                                        1.0
+                                                                        day(s)
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="box-footer">
+                                                    <p>TOTAL: 9.5 day(s)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Dashboard Section End -->
+
+                                <!-- Leave Request Section Start -->
+                                <div
+                                    class="section-dashboard leave-request-table">
+                                    <div class="view-button-con">
+                                        <h1>Leave Requests</h1>
+                                        <div class="view-button">
+                                            <button
+                                                type="button"
+                                                class="list-view">
+                                                List View
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="month-view">
+                                                Month View
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-w">
+                                        <div class="box">
+                                            <div class="box-container">
+                                                <div class="leave-request-head">
+                                                    <button type="button">
+                                                        All
+                                                    </button>
+                                                    <button type="button">
+                                                        Approved
+                                                    </button>
+                                                    <button type="button">
+                                                        Rejected
+                                                    </button>
+
+                                                    <div
+                                                        class="datepicker-container">
+                                                        <input
+                                                            type="text"
+                                                            id="datepicker"
+                                                            placeholder="Click to select a date" />
+                                                        <span
+                                                            ><img
+                                                                src="./assets/img/calendar.svg"
+                                                                alt="calendar"
+                                                        /></span>
+                                                    </div>
+                                                </div>
+                                                <table
+                                                    id="leaveRequest"
+                                                    class="display"
+                                                    cellspacing="0"
+                                                    width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                <label
+                                                                    class="custom-checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        id="selectAll" />
+                                                                    <span
+                                                                        class="checkmark"></span>
+                                                                </label>
+                                                            </th>
+                                                            <th>Name</th>
+                                                            <th>Period</th>
+                                                            <th
+                                                                class="width-100">
+                                                                Day(s)
+                                                            </th>
+                                                            <th
+                                                                class="width-150">
+                                                                Leave Type
+                                                            </th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                                <!-- Modal HTML Structure -->
+                                                <div
+                                                    id="actionModal"
+                                                    class="modal">
+                                                    <div class="modal-content">
+                                                        <span class="close-btn"
+                                                            >&times;</span
+                                                        >
+                                                        <h2
+                                                            id="modalTtitle"></h2>
+
+                                                        <div
+                                                            class="modal-body"
+                                                            id="modalBody">
+                                                            <p
+                                                                id="modalMessage"></p>
+                                                        </div>
+                                                        <div
+                                                            class="modal-footer">
+                                                            <button
+                                                                type="button"
+                                                                id="cancelAction"
+                                                                class="cancel-btn">
+                                                                No
+                                                            </button>
+                                                            <button
+                                                                type="button"
+                                                                id="confirmAction"
+                                                                class="confirm-btn"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Leave Request Section Start -->
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="tabs" id="leaveTab2" />
+                            <label for="leaveTab2">Leave Requests</label>
+                            <div
+                                id="tab-content2"
+                                class="tab-content animated fadeIn">
+                                Leave Requests
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="tabs" id="leaveTab3" />
+                            <label for="leaveTab3">Leave Types</label>
+                            <div
+                                id="tab-content3"
+                                class="tab-content animated fadeIn">
+                                Leave Types
+                            </div>
+                        </li>
+                        <li class="display-none">
+                            <input type="radio" name="tabs" id="leaveTab4" />
+                            <label for="leaveTab4">Leave Calendar</label>
+                            <div
+                                id="tab-content4"
+                                class="tab-content animated fadeIn">
+                                Leave Calendar
+                            </div>
+                        </li>
+                        <li class="display-none">
+                            <input type="radio" name="tabs" id="leaveTab5" />
+                            <label for="leaveTab5">Leave Report</label>
+                            <div
+                                id="tab-content5"
+                                class="tab-content animated fadeIn">
+                                Leave Report
+                            </div>
+                        </li>
+                        <li class="display-none">
+                            <input type="radio" name="tabs" id="leaveTab6" />
+                            <label for="leaveTab6">Leave Approver</label>
+                            <div
+                                id="tab-content6"
+                                class="tab-content animated fadeIn">
+                                Leave Approver
+                            </div>
+                        </li>
+                        <li class="display-none">
+                            <button class="button-filter">
+                                <img
+                                    src="./assets/img/filter-icon.png"
+                                    alt="filter" />
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+        <!-- DataTables plugin for jQuery -->
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+        <!-- DataTables plugin for css -->
+        <script src="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"></script>
+        <!-- Flatpicker JS -->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <!-- Flatpickr Month Select Plugin JS -->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+        <!-- SumoSelect CSS -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.1.0/sumoselect.min.css"
+            rel="stylesheet" />
+        <!-- Select2 JS -->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/js/select2.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>
